@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Analytics Website</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to My Website 🚀</h1>
+    <p>This site is tracked using Google Analytics.</p>
+
+    <button onclick="trackClick()">Click Me</button>
+
+    <script>
+        function trackClick() {
+            gtag('event', 'button_click', {
+                'event_category': 'engagement',
+                'event_label': 'main_button'
+            });
+            alert("Button clicked! Event tracked.");
+        }
+    </script>
+</body>
+</html>
